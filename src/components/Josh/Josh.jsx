@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { JoshMessage, MessageBubble, TalkJosh } from './JoshStyled'
 
-const Josh = ({message}) => {
+const Josh = ({message, time}) => {
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setIsVisible(false);
-        }, 5000);
+        }, time);
 
         return () => {
             clearTimeout(timeoutId);
@@ -15,16 +15,18 @@ const Josh = ({message}) => {
     }, []);
 
     return (
-        <>
+        <>  
+        <JoshMessage>
             {isVisible && (
-                <JoshMessage>
+                    <>
                     <MessageBubble>
                         {message}
                     </MessageBubble>
                     <TalkJosh>
                     </TalkJosh>
-                </JoshMessage>
+                    </>              
             )}
+        </JoshMessage>
         </>
     );
 }

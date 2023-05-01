@@ -26,8 +26,6 @@ const Card = () => {
  
       setNotes([...notes, newNote]);
       setNote('');
-    } else {
-      console.log('La nota está vacía'); // Mostrar un mensaje de error
     }
 
   };
@@ -46,9 +44,9 @@ const Card = () => {
 
   return (
     <CardContainer>
-      <Josh message={"Agrega una nota"}></Josh>
+      <Josh message={"Agrega una nota"} time={4000}></Josh>
       <CardStyled>
-        <CardText>TODO LIST🔥</CardText>
+        <CardText>JUST DO LIST ✅ </CardText>
         <Box
           component="form"
           sx={{
@@ -77,6 +75,7 @@ const Card = () => {
           )
         })}
       </CardStyled>
+      
     </CardContainer>
   );
 };
