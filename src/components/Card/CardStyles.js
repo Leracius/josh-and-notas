@@ -28,5 +28,13 @@ export const CardNote = styled.div`
     padding: 10px;
     text-align: center;
     margin-top: 20px;
+    h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        font-weight: 600;
+        color: gray;
+        text-align: center;
+    }
     
 `

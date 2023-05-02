@@ -39,6 +39,7 @@ const Card = () => {
 
   const handleDeleteAllNotes = () => {
     setNotes([]);
+    console.log(note);
   };
 
 
@@ -58,7 +59,7 @@ const Card = () => {
         <TextField
          onKeyDown={handleKeyDown} 
          id="outlined-basic" 
-         label="Escribe tu nota" 
+         label="Escribe tu nota 👾" 
          variant="outlined" 
          value={note} 
          onChange={handleNoteChange} />
@@ -69,8 +70,8 @@ const Card = () => {
         </Stack>
         {notes.map((note) => {
           return (
-            <CardNote key={note.id}>
-              {note.content}
+            <CardNote>
+              <h1 key={note.id}>{note.content}</h1>
             </CardNote>
           )
         })}

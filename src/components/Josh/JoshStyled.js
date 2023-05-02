@@ -21,7 +21,7 @@ export const MessageBubble = styled.div`
         content: "";
         position: absolute;
         border-style: solid;
-        top: 60px;
+        top: 55px;
         border-width: 10px;
         border-color: white transparent transparent transparent;
     }
