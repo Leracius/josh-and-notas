@@ -7,7 +7,6 @@ export const JoshMessage = styled.div`
     justify-content: center;
     flex-direction: column;
     margin-top: 20px;
-    height: 144px;
 `
 export const MessageBubble = styled.div`
     color: black;
